@@ -9,6 +9,8 @@ def color_distance(c0, c1):
 #                                      `rgb(18, 171, 87)` or
 #                                      `rgba(18, 171, 87, 1)`
 #   into an RGB list [18, 171, 87]
+# 
+# Needed because of this bug: https://github.com/gradio-app/gradio/issues/12071
 def css_to_rgb(css_str):
   if css_str[0] == "#":
     return [int(css_str[i:i+2], 16) for i in range(1,6,2)]
