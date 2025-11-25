@@ -82,7 +82,7 @@ async function runFilter(imgBlob) {
     threshold: mSlider.value()
   }
 
-  let filterRes = await mClient.predict("/predict", inputs);
+  let filterRes = await mClient.predict("/highlight_color", inputs);
   mImgOut = loadImage(filterRes.data[0].url);
 }
 
